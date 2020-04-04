@@ -32,9 +32,14 @@ export default createGlobalStyle`
     }
   }
 
+  html {
+    /* height: 100vh;*/ 
+  }
+
   html, body, #root {
-    min-height: 100%;
+    flex: 1;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;

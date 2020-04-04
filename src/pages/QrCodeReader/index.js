@@ -15,25 +15,28 @@ export default function QrCodeReader() {
   }, [scanner, selectedCam]);
 
   useEffect(() => {
+    console.log("teste");
+
     const scanner = new Instascan.Scanner({
+      facingMode: "environment",
       video: document.getElementById("preview"),
       scanPeriod: 5,
     });
 
     setScanner(scanner);
 
-    scanner.addListener("scan", function (content, image) {
+    /* scanner.addListener("scan", function (content, image) {
       console.log("teste", content);
       alert(content);
       // self.scans.unshift({ date: +Date.now(), content: content });
-    });
+    }); */
 
     Instascan.Camera.getCameras()
       .then(function (cameras) {
         setCameras(cameras);
 
         if (cameras.length > 0) {
-          if (!selectedCam) setSelectedCam(cameras[0]);
+          if (!selectedCam) setSelectedCam(cameras[1]);
           //scanner.start(cameras[0]);
         } else {
           alert("Nenhuma Camera encontrada");
@@ -50,7 +53,7 @@ export default function QrCodeReader() {
       <video id="preview"></video>
       <Sources>
         {cameras.map((cam) => {
-          return <div onClick={() => onSelectCam(cam)}>{cam.name}</div>;
+          return <div onClick={() => setSelectedCam(cam)}>{cam.name}</div>;
         })}
       </Sources>
     </Container>

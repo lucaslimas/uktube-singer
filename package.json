@@ -6,14 +6,21 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "events": "^3.1.0",
+    "fsm-as-promised": "^0.16.0",
     "instacam": "^1.11.4",
+    "qr-scanner": "^1.1.1",
     "react": "^16.13.1",
+    "react-camera-pro": "^1.0.3",
+    "react-device-detect": "^1.11.14",
     "react-dom": "^16.13.1",
+    "react-html5-camera-photo": "^1.5.4",
     "react-scripts": "3.4.1",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "visibilityjs": "^2.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set HTTPS=true&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

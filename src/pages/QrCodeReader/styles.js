@@ -13,4 +13,12 @@ export const Container = styled.div`
 
 export const Sources = styled.div`
   height: 120px;
+  display: flex;
+  flex-direction: row;
+  > div {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #f0f0f0;
+  }
 `;
